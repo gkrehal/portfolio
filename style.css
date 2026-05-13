@@ -1,0 +1,34 @@
+:root{
+    --blue: #5D9AE7;
+    --red: #E67169;
+    --yellow: #EBB95B;
+    --primary: #303C3B;
+    --secondary: #F9F9F9;
+    --background: #FFFFFF;
+
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('./assets/fonts/BeVietnamPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('./assets/fonts/BeVietnamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('./assets/fonts/BeVietnamPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
