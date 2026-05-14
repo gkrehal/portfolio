@@ -1,0 +1,145 @@
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 100vh;
+}
+
+.hero .container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    gap: clamp(16px, 4vw, 48px);
+
+    padding-bottom: clamp(48px, 8vh, 100px);
+}
+
+.intro {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.35;
+    width: 100%;
+    max-width: 950px;
+}
+
+.subtitle {
+    font-size: 14px;
+    padding-top: 1rem;
+    color: var(--primary);
+}
+
+/* =========================
+   FEATURED WORK
+========================= */
+
+.featured-work-title {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 4vw, 48px);
+}
+
+.featured-work {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px, 6vw, 80px);
+}
+
+.featured-work p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary);
+}
+
+/* PROJECT CARD */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 10vw, 8rem);
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+}
+
+.project-card {
+  border: 1px solid var(--secondary);
+  background: var(--secondary);
+
+}
+
+/* IMAGE PLACEHOLDER */
+
+.project-image {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background: #c2c2c2;
+}
+
+/* CONTENT */
+
+.project-content {
+  padding: 24px;
+}
+
+.project-description {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 1000px;
+}
+
+/* PROJECT INFO */
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.project-info h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+/* TAGS */
+
+.tags {
+  display: flex;
+  gap: clamp(16px, 4vw, 48px);
+  flex-wrap: wrap;
+}
+
+.tags span {
+  font-size: 12px;
+  font-weight: 500;
+}

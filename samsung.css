@@ -1,0 +1,90 @@
+/* =========================
+   PROJECT HERO
+========================= */
+
+.project-hero {
+    padding-top: clamp(100px, 14vh, 180px);
+    padding-bottom: clamp(80px, 10vh, 140px);
+}
+
+.project-hero .container {
+    padding-inline: clamp(24px, 4vw, 48px);
+}
+
+
+.project-company {
+    font-size: 1rem;
+    font-weight: 400;
+
+    margin-bottom: 48px;
+}
+
+.project-heading {
+    font-size: clamp(1rem, 2vw, 3rem);
+
+    font-weight: 600;
+    line-height: 1.35;
+
+
+    margin: 0;
+}
+
+.project-meta {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+
+    justify-content: start;
+    column-gap: clamp(80px, 12vw, 180px);
+
+    margin-top: 10rem;
+}
+
+/* EACH COLUMN */
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.meta-label {
+    font-size: 1rem;
+    color: #666;
+
+    margin: 0;
+}
+
+.meta-value {
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .project-hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .project-heading {
+        font-size: 2rem;
+        line-height: 1.45;
+    }
+
+    .project-meta {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        margin-top: 56px;
+    }
+
+}
