@@ -1,0 +1,316 @@
+/* =========================
+   YOUTUBE PROJECT PAGE
+========================= */
+
+.youtube-hero .project-meta {
+    column-gap: clamp(52px, 7vw, 112px);
+}
+
+.youtube-background-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 430px) minmax(240px, 360px);
+    align-items: center;
+    gap: clamp(48px, 8vw, 120px);
+
+    margin-top: 72px;
+}
+
+.youtube-background-grid p {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+.youtube-logo {
+    width: 100%;
+    max-width: 360px;
+}
+
+.youtube-problem-section {
+    padding-top: clamp(112px, 16vw, 200px);
+}
+
+.youtube-problem-section > p:not(.section-note),
+.youtube-research-block p {
+    max-width: 860px;
+
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+.youtube-problem-section .section-note {
+    margin-bottom: 28px !important;
+}
+
+.youtube-research-section {
+    padding-top: clamp(96px, 12vw, 150px);
+}
+
+.youtube-research-block {
+    margin-top: 72px;
+}
+
+.youtube-research-block h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    margin: 0 0 44px;
+}
+
+.youtube-research-question-section {
+    padding-top: clamp(96px, 14vw, 180px);
+}
+
+.youtube-research-question-band {
+    position: relative;
+    left: calc(-1 * (160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px)));
+
+    width: 100vw;
+    background-color: #EAF4FF;
+
+    padding-block: clamp(112px, 16vw, 180px);
+}
+
+.youtube-research-question-inner {
+    width: min(760px, calc(100% - 48px));
+
+    margin-left: calc(160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px));
+}
+
+.youtube-research-question-inner h2 {
+    color: var(--blue);
+
+    margin-bottom: 48px;
+}
+
+.youtube-research-question-inner p {
+    color: var(--blue);
+
+    font-size: 1.45rem;
+    line-height: 1.55;
+
+    margin: 0;
+}
+
+.youtube-research-goals-section {
+    padding-top: clamp(96px, 14vw, 170px);
+}
+
+.youtube-research-goals-section h2,
+.youtube-usability-section h2 {
+    font-size: 1.45rem;
+    line-height: 1.3;
+
+    margin-bottom: 52px;
+}
+
+.youtube-goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+
+    max-width: 860px;
+}
+
+.youtube-goals-list p {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+.youtube-usability-section {
+    padding-top: clamp(112px, 16vw, 190px);
+}
+
+.youtube-methods-panel {
+    max-width: 900px;
+    background-color: var(--secondary);
+
+    padding: clamp(48px, 7vw, 88px) clamp(48px, 8vw, 112px);
+}
+
+.youtube-methods-panel p {
+    max-width: 720px;
+
+    font-size: clamp(1.2rem, 2vw, 1.75rem);
+    line-height: 1.55;
+
+    margin: 0 0 56px;
+}
+
+.youtube-methods-panel p:last-child {
+    margin-bottom: 0;
+}
+
+.youtube-creators-section {
+    padding-top: clamp(112px, 16vw, 190px);
+}
+
+.youtube-creators-section h2 {
+    font-size: clamp(2.6rem, 5vw, 4.25rem);
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+.youtube-creator-profile {
+    display: grid;
+    grid-template-columns: minmax(0, 460px) minmax(420px, 1fr);
+    align-items: start;
+    gap: clamp(64px, 9vw, 120px);
+
+    margin-top: clamp(88px, 12vw, 140px);
+}
+
+.youtube-creator-profile-secondary {
+    margin-top: clamp(96px, 14vw, 180px);
+}
+
+.youtube-creator-copy {
+    padding-top: 16px;
+}
+
+.youtube-creator-copy h3 {
+    color: var(--blue);
+
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+
+    margin: 0 0 64px;
+}
+
+.youtube-creator-copy p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+.youtube-pain-panel {
+    background-color: #FFF6F6;
+
+    padding: clamp(56px, 7vw, 92px) clamp(36px, 5vw, 56px);
+}
+
+.youtube-pain-panel h3 {
+    color: var(--red);
+
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    font-weight: 700;
+
+    margin: 0 0 48px;
+}
+
+.youtube-pain-point {
+    margin-bottom: 64px;
+}
+
+.youtube-pain-point:last-child {
+    margin-bottom: 0;
+}
+
+.youtube-pain-quote,
+.youtube-pain-insight {
+    font-size: 1rem;
+    line-height: 1.55;
+
+    margin: 0;
+}
+
+.youtube-pain-quote {
+    display: inline-block;
+
+    background-color: var(--red);
+    color: #FFFFFF;
+    border-radius: 4px 4px 0 0;
+
+    font-style: italic;
+    font-weight: 500;
+
+    padding: 16px 24px;
+}
+
+.youtube-pain-insight {
+    color: var(--red);
+    background-color: #FFFFFF;
+    border: 1px solid var(--red);
+    border-radius: 0 4px 4px 4px;
+
+    padding: 18px 24px;
+}
+
+.youtube-placeholder-section {
+    padding-top: clamp(96px, 14vw, 180px);
+}
+
+.youtube-placeholder-section > p {
+    max-width: 760px;
+}
+
+@media (max-width: 768px) {
+
+    .youtube-background-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        margin-top: 48px;
+    }
+
+    .youtube-logo {
+        max-width: 280px;
+    }
+
+    .youtube-research-question-band {
+        left: calc(-1 * clamp(24px, 4vw, 48px));
+
+        padding-block: 88px;
+    }
+
+    .youtube-research-question-inner {
+        width: calc(100% - 48px);
+        margin-inline: 24px;
+    }
+
+    .youtube-research-question-inner p {
+        font-size: 1.15rem;
+    }
+
+    .youtube-research-goals-section h2,
+    .youtube-usability-section h2 {
+        margin-bottom: 36px;
+    }
+
+    .youtube-methods-panel {
+        padding: 36px 24px;
+    }
+
+    .youtube-methods-panel p {
+        font-size: 1.15rem;
+        margin-bottom: 36px;
+    }
+
+    .youtube-creator-profile {
+        grid-template-columns: 1fr;
+        gap: 48px;
+
+        margin-top: 64px;
+    }
+
+    .youtube-creator-copy h3 {
+        margin-bottom: 32px;
+    }
+
+    .youtube-pain-panel {
+        padding: 36px 24px;
+    }
+
+    .youtube-pain-quote {
+        width: 100%;
+    }
+
+}
