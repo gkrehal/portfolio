@@ -2,6 +2,12 @@
    PROJECT HERO
 ========================= */
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
 .project-hero {
     padding-top: clamp(100px, 14vh, 180px);
     padding-bottom: clamp(80px, 10vh, 140px);
@@ -87,6 +93,9 @@
 .case-menu {
     position: sticky;
     top: 40px;
+    align-self: start;
+    z-index: 3;
+    height: max-content;
 }
 
 .case-menu nav {
@@ -100,15 +109,32 @@
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
+
+    transition: color 0.2s ease, font-weight 0.2s ease;
 }
 
+.case-menu a:hover,
+.case-menu a:focus-visible,
 .case-menu a.active {
     color: var(--blue);
     font-weight: 700;
 }
 
+.case-menu a:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 4px;
+}
+
 .case-section {
     scroll-margin-top: 48px;
+}
+
+.case-study .container,
+.case-study-layout,
+.case-content,
+.case-section {
+    min-width: 0;
+    overflow: visible;
 }
 
 .case-section h2 {
@@ -236,7 +262,7 @@ mark {
 
 .pain-points {
     position: relative;
-    left: calc(-1 * (160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px)));
+    left: calc(-1 * (160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px) + max((100vw - 1400px) / 2, 0px)));
 
     width: 100vw;
     background-color: #FFF6F6;
@@ -248,7 +274,7 @@ mark {
 .pain-points-inner {
     width: min(720px, calc(100% - 48px));
 
-    margin-left: calc(160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px));
+    margin-left: calc(160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px) + max((100vw - 1400px) / 2, 0px));
 }
 
 .pain-points h3 {
@@ -373,10 +399,14 @@ mark {
 
 .design-focus-band {
     position: relative;
-    left: calc(-1 * (160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px)));
+    left: calc(-1 * (160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px) + max((100vw - 1400px) / 2, 0px)));
 
     width: 100vw;
+    min-height: 100vh;
     background-color: #EAF4FF;
+
+    display: flex;
+    align-items: center;
 
     padding-block: clamp(72px, 10vw, 120px);
 }
@@ -384,7 +414,7 @@ mark {
 .design-focus-inner {
     width: min(720px, calc(100% - 48px));
 
-    margin-left: calc(160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px));
+    margin-left: calc(160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px) + max((100vw - 1400px) / 2, 0px));
 }
 
 .design-focus-inner h2 {
@@ -602,6 +632,62 @@ mark {
    MOBILE
 ========================= */
 
+@media (max-width: 1180px) {
+
+    .project-meta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 48px;
+    }
+
+    .problem-profile {
+        gap: 64px;
+    }
+
+}
+
+@media (max-width: 960px) {
+
+    .case-study .container {
+        padding-inline: 24px;
+    }
+
+    .case-study-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .case-menu {
+        top: 0;
+        z-index: 3;
+
+        background-color: var(--background);
+        padding-block: 16px;
+        overflow-x: auto;
+    }
+
+    .case-menu nav {
+        flex-direction: row;
+        gap: 24px;
+        min-width: max-content;
+    }
+
+    .pain-points,
+    .design-focus-band {
+        left: -24px;
+    }
+
+    .pain-points-inner,
+    .design-focus-inner {
+        width: calc(100% - 48px);
+        margin-inline: 24px;
+    }
+
+    .design-focus-band {
+        min-height: 80vh;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     .project-hero {
@@ -621,26 +707,6 @@ mark {
         margin-top: 56px;
     }
 
-    .case-study-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .case-menu {
-        top: 0;
-        z-index: 2;
-
-        background-color: var(--background);
-        padding-block: 16px;
-        overflow-x: auto;
-    }
-
-    .case-menu nav {
-        flex-direction: row;
-        gap: 24px;
-        min-width: max-content;
-    }
-
     .image-pair {
         grid-template-columns: 1fr;
     }
@@ -658,15 +724,6 @@ mark {
         max-width: 220px;
     }
 
-    .pain-points {
-        left: calc(-1 * clamp(24px, 4vw, 48px));
-    }
-
-    .pain-points-inner {
-        width: calc(100% - 48px);
-        margin-inline: 24px;
-    }
-
     .pain-quote,
     .pain-goal {
         width: 100%;
@@ -682,21 +739,31 @@ mark {
         gap: 20px;
     }
 
-    .design-focus-band {
-        left: calc(-1 * clamp(24px, 4vw, 48px));
-    }
-
-    .design-focus-inner {
-        width: calc(100% - 48px);
-        margin-inline: 24px;
-    }
-
     .workshop-panel {
         padding: 32px 24px;
     }
 
     .workshop-meta {
         gap: 16px 32px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .project-heading {
+        font-size: 1.65rem;
+    }
+
+    .case-section h2,
+    .design-focus-inner h2 {
+        font-size: 2.25rem;
+    }
+
+    .pain-quote,
+    .pain-goal,
+    .callout {
+        overflow-wrap: break-word;
     }
 
 }
