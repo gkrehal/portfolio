@@ -18,16 +18,19 @@ body {
 .youtube-case-study .case-content,
 .youtube-case-study .case-section,
 .youtube-background-grid,
-.youtube-creator-profile,
+.youtube-creators-grid,
+.youtube-creator-card,
+.youtube-methods-panel,
 .youtube-pain-panel,
-.youtube-methods-panel {
+.youtube-workflow-video {
     min-width: 0;
 }
 
 .youtube-hero .meta-value,
+.youtube-creator-card,
+.youtube-methods-panel p,
 .youtube-pain-quote,
-.youtube-pain-insight,
-.youtube-methods-panel p {
+.youtube-pain-insight {
     overflow-wrap: break-word;
 }
 
@@ -78,7 +81,7 @@ body {
 }
 
 .youtube-research-section {
-    padding-top: clamp(96px, 12vw, 150px);
+    padding-top: clamp(96px, 14vw, 180px);
 }
 
 .youtube-research-block {
@@ -126,21 +129,19 @@ body {
 .youtube-research-question-inner p {
     color: var(--blue);
 
-    font-size: 1.45rem;
-    line-height: 1.55;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
 
     margin: 0;
 }
 
 .youtube-research-goals-section {
-    padding-top: clamp(96px, 14vw, 170px);
+    padding-top: clamp(96px, 14vw, 180px);
 }
 
 .youtube-research-goals-section h2,
 .youtube-usability-section h2 {
-    font-size: 1.45rem;
-    line-height: 1.3;
-
     margin-bottom: 52px;
 }
 
@@ -160,7 +161,7 @@ body {
 }
 
 .youtube-usability-section {
-    padding-top: clamp(112px, 16vw, 190px);
+    padding-top: clamp(96px, 14vw, 180px);
 }
 
 .youtube-methods-panel {
@@ -173,8 +174,8 @@ body {
 .youtube-methods-panel p {
     max-width: 720px;
 
-    font-size: clamp(1.2rem, 2vw, 1.75rem);
-    line-height: 1.55;
+    font-size: 1.15rem;
+    line-height: 1.6;
 
     margin: 0 0 56px;
 }
@@ -184,149 +185,85 @@ body {
 }
 
 .youtube-creators-section {
-    padding-top: clamp(112px, 16vw, 190px);
+    padding-top: clamp(96px, 14vw, 180px);
 }
 
 .youtube-creators-section h2 {
-    font-size: clamp(2.6rem, 5vw, 4.25rem);
-    line-height: 1.1;
-
-    margin-bottom: 18px;
+    margin-bottom: 68px;
 }
 
-.youtube-creator-profile {
+.youtube-creators-grid {
     display: grid;
-    grid-template-columns: minmax(0, 460px) minmax(0, 1fr);
-    align-items: start;
-    gap: clamp(64px, 9vw, 120px);
-
-    margin-top: clamp(88px, 12vw, 140px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(36px, 5vw, 56px);
+    max-width: 980px;
 }
 
-.youtube-creator-profile-secondary {
-    margin-top: clamp(96px, 14vw, 180px);
+.youtube-creator-card {
+    background-color: #FAFAFA;
+    padding: clamp(56px, 6vw, 72px) clamp(44px, 5vw, 58px);
 }
 
-.youtube-creator-copy {
-    padding-top: 16px;
-}
-
-.youtube-creator-copy h3 {
+.youtube-creator-card h3 {
     color: var(--blue);
-
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
     font-weight: 700;
     line-height: 1.2;
 
-    margin: 0 0 64px;
+    margin: 0 0 40px;
 }
 
-.youtube-creator-copy p {
-    font-size: 1.15rem;
+.youtube-creator-card p {
+    font-size: 1rem;
     line-height: 1.6;
 
     margin: 0;
 }
 
-.youtube-pain-panel {
-    background-color: #FFF6F6;
+.youtube-creator-quote {
+    font-style: italic;
+    font-weight: 700;
 
-    padding: clamp(56px, 7vw, 92px) clamp(36px, 5vw, 56px);
+    margin-bottom: 52px !important;
 }
 
-.youtube-pain-panel h3 {
-    color: var(--red);
+.youtube-solutions-section {
+    padding-top: clamp(96px, 14vw, 180px);
+}
 
-    font-size: clamp(1.4rem, 2.2vw, 2rem);
-    font-weight: 700;
+.youtube-solutions-section h2 {
+    margin-bottom: 24px;
+}
+
+.youtube-solutions-section > .section-note {
+    margin-bottom: clamp(96px, 13vw, 150px) !important;
+}
+
+.youtube-solution-block h3 {
+    font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+    line-height: 1.3;
 
     margin: 0 0 48px;
 }
 
-.youtube-pain-point {
-    margin-bottom: 64px;
+.youtube-solution-block + .youtube-solution-block {
+    margin-top: clamp(96px, 14vw, 180px);
 }
 
-.youtube-pain-point:last-child {
-    margin-bottom: 0;
-}
-
-.youtube-pain-quote,
-.youtube-pain-insight {
-    font-size: 1rem;
-    line-height: 1.55;
-
-    margin: 0;
-}
-
-.youtube-pain-quote {
-    display: inline-block;
-
-    background-color: var(--red);
-    color: #FFFFFF;
-    border-radius: 4px 4px 0 0;
-
-    font-style: italic;
-    font-weight: 500;
-
-    padding: 16px 24px;
-}
-
-.youtube-pain-insight {
-    color: var(--red);
-    background-color: #FFFFFF;
-    border: 1px solid var(--red);
-    border-radius: 0 4px 4px 4px;
-
-    padding: 18px 24px;
-}
-
-.youtube-solutions-section {
-    padding-top: clamp(112px, 16vw, 190px);
-}
-
-.youtube-solutions-section h2 {
-    font-size: clamp(2.6rem, 5vw, 4.25rem);
-    line-height: 1.1;
-
-    margin-bottom: clamp(72px, 10vw, 120px);
-}
-
-.youtube-solution-block h3 {
-    font-size: clamp(1.55rem, 2.5vw, 2.25rem);
-    line-height: 1.3;
-
-    margin: 0 0 clamp(64px, 9vw, 96px);
-}
-
-.youtube-solution-callouts {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-
+.youtube-solution-intro,
+.youtube-proposed-solution-heading p {
     max-width: 900px;
-}
-
-.youtube-solution-callouts p {
-    color: var(--red);
-    background-color: #FFFFFF;
-    border: 1px solid var(--red);
-    border-radius: 4px;
 
     font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.55;
+    line-height: 1.6;
 
     margin: 0;
-    padding: 18px 24px;
-
-    box-shadow: 0 4px 10px rgba(230, 113, 105, 0.12);
 }
 
 .youtube-workflow-video {
     width: min(940px, 100%);
 
-    margin: clamp(72px, 10vw, 110px) 0 0;
+    margin: clamp(72px, 10vw, 100px) 0 0;
 }
 
 .youtube-workflow-video video {
@@ -336,19 +273,115 @@ body {
     object-fit: cover;
     background-color: #FFFFFF;
 
-    border: 4px solid #1297FF;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 .youtube-workflow-video figcaption {
     color: var(--primary);
 
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-style: italic;
     line-height: 1.4;
     text-align: center;
 
     margin-top: 28px;
+}
+
+.youtube-pain-panel {
+    width: min(1050px, 100%);
+    background-color: #FFF6F6;
+
+    margin-top: clamp(96px, 14vw, 180px);
+    padding: clamp(64px, 8vw, 88px) clamp(44px, 7vw, 72px);
+}
+
+.youtube-pain-panel h4 {
+    color: var(--red);
+
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1.3;
+
+    margin: 0 0 48px;
+}
+
+.youtube-pain-point {
+    margin-bottom: 48px;
+}
+
+.youtube-pain-point:last-child {
+    margin-bottom: 0;
+}
+
+.youtube-pain-quote,
+.youtube-pain-insight {
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.youtube-pain-quote {
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: var(--red);
+    border-radius: 4px 4px 0 0;
+
+    font-style: italic;
+    font-weight: 700;
+
+    margin: 0;
+    padding: 14px 24px;
+}
+
+.youtube-pain-insight {
+    width: min(760px, 100%);
+    color: var(--red);
+    background-color: #FFFFFF;
+    border: 1px solid var(--red);
+    border-radius: 0 4px 4px 4px;
+
+    font-weight: 500;
+
+    margin: 0;
+    padding: 18px 24px;
+}
+
+.youtube-recommendation-block,
+.youtube-proposed-solution-heading,
+.youtube-how-it-works {
+    margin-top: clamp(96px, 14vw, 180px);
+}
+
+.youtube-recommendation-block h4,
+.youtube-how-it-works h4 {
+    font-size: clamp(1.4rem, 2.3vw, 2rem);
+    line-height: 1.3;
+
+    margin: 0 0 36px;
+}
+
+.youtube-recommendation-block h4 {
+    color: var(--blue);
+}
+
+.youtube-how-it-works h4 {
+    color: var(--yellow);
+}
+
+.youtube-proposed-solution-heading h4 {
+    font-size: clamp(1.4rem, 2.3vw, 2rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
+
+    margin: 0 0 44px;
+}
+
+.youtube-proposed-solution-heading h4 span {
+    font-weight: 400;
+}
+
+.youtube-proposed-solution-heading h4 strong {
+    font-style: normal;
+    font-weight: 700;
 }
 
 .youtube-recommendation {
@@ -359,14 +392,18 @@ body {
     border: 1px solid var(--blue);
     border-radius: 4px;
 
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 1.55;
+    line-height: 1.5;
 
-    margin: clamp(96px, 14vw, 150px) 0 0;
+    margin: 0;
     padding: 18px 24px;
 
     box-shadow: 0 4px 10px rgba(93, 154, 231, 0.12);
+}
+
+.youtube-solution-block > .youtube-recommendation {
+    margin-top: clamp(96px, 14vw, 150px);
 }
 
 .youtube-proposed {
@@ -377,22 +414,55 @@ body {
     border: 1px solid var(--yellow);
     border-radius: 4px;
 
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 1.55;
+    line-height: 1.5;
 
-    margin: clamp(96px, 14vw, 150px) 0 0;
+    margin: 0;
     padding: 18px 24px;
 
     box-shadow: 0 4px 10px rgba(231, 203, 93, 0.12);
+}
+
+.youtube-solution-block > .youtube-proposed {
+    margin-top: clamp(96px, 14vw, 150px);
 }
 
 .youtube-placeholder-section {
     padding-top: clamp(96px, 14vw, 180px);
 }
 
-.youtube-placeholder-section > p {
-    max-width: 760px;
+.youtube-placeholder-section h2 {
+    margin-bottom: clamp(72px, 10vw, 110px);
+}
+
+.youtube-takeaways-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(56px, 7vw, 72px);
+
+    max-width: 980px;
+}
+
+.youtube-takeaway h3 {
+    display: inline;
+    background-color: #FFF3DA;
+
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.youtube-takeaway p {
+    max-width: 920px;
+
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin: 28px 0 0;
 }
 
 .youtube-case-study .case-menu {
@@ -410,13 +480,8 @@ body {
 
 @media (max-width: 1180px) {
 
-    .youtube-creator-profile {
-        grid-template-columns: 1fr;
-        gap: 56px;
-    }
-
-    .youtube-creator-copy {
-        max-width: 620px;
+    .youtube-creators-grid {
+        max-width: 900px;
     }
 
 }
@@ -480,7 +545,7 @@ body {
     }
 
     .youtube-research-question-inner p {
-        font-size: 1.15rem;
+        font-size: 1rem;
     }
 
     .youtube-research-goals-section h2,
@@ -497,42 +562,29 @@ body {
         margin-bottom: 36px;
     }
 
-    .youtube-creator-profile {
-        gap: 48px;
-
-        margin-top: 64px;
+    .youtube-creators-grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
     }
 
-    .youtube-creator-copy h3 {
-        margin-bottom: 32px;
+    .youtube-creators-section h2 {
+        margin-bottom: 40px;
     }
 
-    .youtube-pain-panel {
-        padding: 36px 24px;
-    }
-
-    .youtube-pain-quote {
-        width: 100%;
+    .youtube-creator-card {
+        padding: 40px 28px;
     }
 
     .youtube-solutions-section h2 {
         margin-bottom: 56px;
     }
 
-    .youtube-solution-callouts {
-        gap: 28px;
-    }
-
-    .youtube-workflow-video video {
-        border-width: 3px;
-    }
-
     .youtube-workflow-video figcaption {
-        font-size: 1.05rem;
+        font-size: 1rem;
         margin-top: 20px;
     }
 
-    .youtube-recommendation {
+    .youtube-solution-block > .youtube-recommendation {
         font-size: 1rem;
         margin-top: 72px;
         padding: 16px 18px;
@@ -542,14 +594,16 @@ body {
 
 @media (max-width: 520px) {
 
-    .youtube-creators-section h2,
     .youtube-research-question-inner h2 {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
-    .youtube-pain-quote,
-    .youtube-pain-insight {
-        padding-inline: 18px;
+    .youtube-creator-card h3 {
+        font-size: 1.35rem;
+    }
+
+    .youtube-creator-quote {
+        margin-bottom: 36px !important;
     }
 
 }

@@ -20,11 +20,9 @@
 }
 
 .project-heading {
-    font-size: clamp(1rem, 2vw, 3rem);
-
+    font-size: clamp(1.4rem, 2.15vw, 2.5rem);
     font-weight: 600;
-    line-height: 1.35;
-
+    line-height: 1.45;
 
     margin: 0;
 }
@@ -86,7 +84,7 @@
 }
 
 .knox-copy h2 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(1.75rem, 3.2vw, 2.85rem);
     font-weight: 700;
     line-height: 1.1;
 
@@ -123,7 +121,7 @@
 }
 
 .contributions > h2 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(1.75rem, 3.2vw, 2.85rem);
     font-weight: 700;
     line-height: 1.1;
 
@@ -198,7 +196,7 @@ mark {
 }
 
 .looking-back h2 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(1.75rem, 3.2vw, 2.85rem);
     font-weight: 700;
     line-height: 1.1;
 
