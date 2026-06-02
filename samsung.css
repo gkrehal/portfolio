@@ -214,9 +214,61 @@ mark {
     margin-bottom: 0;
 }
 
+.memory-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    align-items: center;
+    gap: clamp(24px, 2.8vw, 36px);
+
+    margin-top: clamp(64px, 8vw, 92px);
+}
+
+.memory-photo {
+    width: 100%;
+    max-width: 220px;
+    justify-self: center;
+}
+
+.memory-photo-connections {
+    transform: translateY(-8px);
+}
+
+.memory-photo-workshops {
+    transform: translateY(30px);
+}
+
+.memory-photo-christmas {
+    transform: translateY(4px);
+}
+
+.memory-photo-mentorship {
+    transform: translateY(-38px);
+}
+
+.memory-photo-teambuilding {
+    transform: translateY(18px);
+}
+
+.footer {
+    margin-top: 0;
+}
+
 /* =========================
    MOBILE
 ========================= */
+
+@media (max-width: 980px) {
+
+    .memory-gallery {
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+        row-gap: 48px;
+    }
+
+    .memory-photo {
+        transform: none;
+    }
+
+}
 
 @media (max-width: 768px) {
 
@@ -254,6 +306,15 @@ mark {
 
     .impact-card {
         padding: 32px 24px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .memory-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
     }
 
 }
