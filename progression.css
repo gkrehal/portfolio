@@ -72,6 +72,57 @@ body {
 }
 
 /* =========================
+   PROJECT CONTRIBUTION SUMMARY
+========================= */
+
+.project-contribution {
+    background-color: var(--secondary);
+    padding: clamp(56px, 7vw, 92px) 0 clamp(48px, 6vw, 76px);
+}
+
+.project-contribution .container {
+    padding-inline: clamp(24px, 4vw, 48px);
+}
+
+.project-contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(72px, 12vw, 180px);
+}
+
+.project-contribution article { max-width: 510px; }
+
+.project-contribution h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 28px;
+}
+
+.project-contribution p,
+.project-contribution li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.project-contribution p { margin: 0; }
+
+.project-contribution ul {
+    margin: 18px 0 0;
+    padding-left: 22px;
+}
+
+.project-contribution li { padding-left: 4px; }
+
+/* The case-study layout previously followed the hero directly. Once the
+   contribution panel was inserted, it needs its own separation before the
+   sticky menu and first content heading begin. */
+.project-contribution + .case-study {
+    padding-top: clamp(96px, 12vw, 156px);
+}
+
+/* =========================
    CASE STUDY CONTENT
 ========================= */
 
@@ -686,6 +737,11 @@ mark {
         min-height: 80vh;
     }
 
+    .project-contribution-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -705,6 +761,14 @@ mark {
         gap: 40px;
 
         margin-top: 56px;
+    }
+
+    .project-contribution {
+        padding-block: 56px;
+    }
+
+    .project-contribution h2 {
+        margin-bottom: 20px;
     }
 
     .image-pair {
