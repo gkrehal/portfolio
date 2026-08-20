@@ -68,10 +68,10 @@
 
 .knox-overview {
     display: grid;
-    grid-template-columns: minmax(0, 760px) 120px;
+    grid-template-columns: minmax(0, 760px) 144px;
     align-items: center;
     justify-content: start;
-    gap: clamp(32px, 6vw, 80px);
+    gap: clamp(48px, 7vw, 96px);
 
     border-top: 1px solid var(--primary);
 
@@ -107,9 +107,9 @@
 
 .knox-icon {
     width: 100%;
-    max-width: 120px;
+    max-width: 136px;
 
-    justify-self: start;
+    justify-self: center;
 }
 
 /* =========================

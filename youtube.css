@@ -129,7 +129,7 @@ body {
 .youtube-research-question-inner p {
     color: var(--blue);
 
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     line-height: 1.6;
 
@@ -288,7 +288,8 @@ body {
 }
 
 .youtube-pain-panel {
-    width: min(1050px, 100%);
+    box-sizing: border-box;
+    width: min(940px, 100%);
     background-color: #FFF6F6;
 
     margin-top: clamp(96px, 14vw, 180px);
@@ -545,7 +546,7 @@ body {
     }
 
     .youtube-research-question-inner p {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
 
     .youtube-research-goals-section h2,

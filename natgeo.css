@@ -296,9 +296,14 @@
     position: relative;
     left: calc(-1 * (160px + clamp(48px, 7vw, 96px) + clamp(24px, 4vw, 48px) + max((100vw - 1400px) / 2, 0px)));
     width: 100vw;
+    min-height: 100vh;
     background: #EAF4FF;
     color: var(--blue);
     margin-top: clamp(96px, 14vw, 180px);
+
+    display: flex;
+    align-items: center;
+
     padding: clamp(96px, 14vw, 170px) 0;
 }
 
@@ -343,7 +348,7 @@
     margin: 0;
 }
 
-.natgeo-finding-card { margin-top: clamp(96px, 14vw, 172px); }
+.natgeo-finding-card { margin-top: clamp(72px, 10vw, 136px); }
 .natgeo-finding-card h4 { font-size: 1rem; margin: 0 0 22px; }
 .natgeo-finding-card > p { font-size: 0.9rem; line-height: 1.55; margin: 0; }
 
@@ -397,8 +402,9 @@
 
 .natgeo-final-section { padding-top: clamp(120px, 18vw, 220px); }
 .natgeo-final-feature { margin-top: clamp(72px, 11vw, 136px); }
+.natgeo-final-section > .natgeo-final-feature:first-of-type { margin-top: clamp(56px, 8vw, 104px); }
 .natgeo-final-feature > p { max-width: 930px; }
-.natgeo-final-layout { margin-top: 56px; }
+.natgeo-final-layout { max-width: 930px; margin-top: 56px; }
 
 .natgeo-impact-section { padding-top: clamp(120px, 18vw, 220px); }
 .natgeo-impact-section > p { max-width: 930px; }
@@ -420,6 +426,11 @@
 .natgeo-takeaways-section p { margin-top: 20px; }
 
 .natgeo-other-work .other-work-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+@media (max-width: 960px) {
+    .natgeo-research-band { left: -24px; min-height: 80vh; }
+    .natgeo-research-band > div { width: calc(100% - 48px); margin-inline: 24px; }
+}
 
 @media (max-width: 900px) {
     .natgeo-hero .project-meta {

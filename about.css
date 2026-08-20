@@ -11,8 +11,8 @@
 
 .about-layout {
     display: grid;
-    grid-template-columns: minmax(280px, 0.9fr) minmax(360px, 1fr);
-    gap: clamp(64px, 9vw, 132px);
+    grid-template-columns: minmax(220px, 0.65fr) minmax(620px, 1.45fr);
+    gap: clamp(32px, 4vw, 56px);
     align-items: start;
     max-width: 1120px;
     margin: 0 auto;
@@ -21,24 +21,26 @@
 .about-photo-wrap {
     display: flex;
     justify-content: center;
-    padding-top: 24px;
+    padding-top: 18px;
 }
 
 .about-photo {
-    width: min(100%, 430px);
+    width: min(100%, 280px);
     filter: drop-shadow(0 12px 18px rgba(48, 60, 59, 0.12));
 }
 
 .about-content {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(52px, 7vw, 78px);
+    display: grid;
+    grid-template-columns: minmax(250px, 0.8fr) minmax(420px, 1.45fr);
+    gap: clamp(32px, 5vw, 64px);
 }
 
 .about-intro {
+    grid-column: 2;
+    grid-row: 1 / span 2;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 26px;
 }
 
 .about-intro h1 {
@@ -51,13 +53,25 @@
 
 .about-intro p,
 .about-detail p {
-    max-width: 600px;
+    max-width: 100%;
     font-size: 1rem;
     line-height: 1.6;
 }
 
+.about-detail {
+    grid-column: 1;
+}
+
+.about-detail:nth-of-type(2) {
+    grid-row: 1;
+}
+
+.about-detail:nth-of-type(3) {
+    grid-row: 2;
+}
+
 .about-detail h2 {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-size: 1.45rem;
     font-weight: 700;
 }
@@ -69,9 +83,9 @@
 }
 
 .experience-item {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     align-items: start;
 }
 
@@ -87,7 +101,15 @@
     }
 
     .about-content {
+        display: flex;
+        flex-direction: column;
         gap: 52px;
+    }
+
+    .about-intro,
+    .about-detail {
+        grid-column: auto;
+        grid-row: auto;
     }
 
 }

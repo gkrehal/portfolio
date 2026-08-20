@@ -286,7 +286,7 @@ mark {
     justify-content: start;
     gap: clamp(80px, 14vw, 200px);
 
-    margin-top: clamp(72px, 10vw, 120px);
+    margin-top: clamp(56px, 8vw, 96px);
 }
 
 .problem-copy h3 {
@@ -384,6 +384,10 @@ mark {
     max-width: 920px;
 }
 
+#background > p {
+    max-width: 920px;
+}
+
 .research-section {
     padding-top: clamp(96px, 14vw, 180px);
 }
@@ -401,7 +405,7 @@ mark {
 
 .research-block > p,
 .client-needs-section > p {
-    max-width: 780px;
+    max-width: 920px;
 
     font-size: 1rem;
     line-height: 1.6;
@@ -477,7 +481,7 @@ mark {
 .design-focus-inner p {
     color: var(--blue);
 
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     line-height: 1.6;
 
@@ -503,7 +507,7 @@ mark {
 
 .workshop-intro p,
 .workshop-goals li {
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -568,9 +572,9 @@ mark {
 }
 
 .findings-block p {
-    max-width: 860px;
+    max-width: none;
 
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.6;
 
     margin: 0;
@@ -581,9 +585,9 @@ mark {
 }
 
 .final-concept-section p {
-    max-width: 860px;
+    max-width: none;
 
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.6;
 
     margin: 0;
