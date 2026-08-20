@@ -20,7 +20,7 @@
 }
 
 .project-heading {
-    font-size: clamp(1.4rem, 2.15vw, 2.5rem);
+    font-size: clamp(1.4rem, 2.15vw, 2.25rem);
     font-weight: 600;
     line-height: 1.45;
 
